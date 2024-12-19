@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            font-family: 'Poppins',sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #FFCCE1;
+        }
+        .app{
+            background: #fff;
+            width: 90%;
+            max-width: 600px;
+            margin: 100px auto 0;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .app h1{
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        #quiz{
+            padding: 20px 0;
+        }
+        #quiz h2{
+            font-size: 24px;
+            font-weight: 500;
+        }
+        #answers button{
+            width: 100%;
+            margin-top: 20px;
+            height: 40px;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+            text-align: left;
+        }
+        #answers button:hover{
+            background-color: #000;
+            color: white;
+        }
+        #next{
+            display: flex;
+            justify-content: center;
+        }
+        #next button{
+            height: 40px;
+            width: 90px;
+            background-color: #FFCCE1;
+            border: none;
+            border-radius: 5px;
+            font-size: 17px;
+            cursor: pointer;
+            color: #fff;
+            display: none;
+        }
+        #next button:hover{
+            background-color: #E195AB;
+        }
+        .correct{
+            background: #88D66C;
+        }
+        .incorrect{
+            background: #EF5A6F;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <h1>Sample Quiz</h1>
+        <hr>
+        <div id="quiz">
+            <h2 id="question">Question goes here</h2>
+            <div id="answers">
+                <button class="btn">Ans1</button>
+                <button class="btn">Ans2</button>
+                <button class="btn">Ans3</button>
+                <button class="btn">Ans4</button>
+            </div>
+        </div>
+        <div id="next">
+            <button>Next</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
