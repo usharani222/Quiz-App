@@ -14,6 +14,31 @@
         body{
             background-color: #FFCCE1;
         }
+        /* //cursor css start */
+        #cursor{
+            background-color: #000;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: width 0.3s ease,height 0.3s ease-out;
+        }
+        #inner{
+            height: 0;
+            width: 0;
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            background-color: #fff;
+            transition: width 0.3s ease,height 0.3s ease-out;
+        }
+
+        /* //cursor css ends */
         .app{
             background: #fff;
             width: 90%;
@@ -37,44 +62,47 @@
             width: 100%;
             margin-top: 20px;
             height: 40px;
-            background-color: #fff;
+            background-color: transparent;
             border: 1px solid #000;
+            color: #000;
             border-radius: 5px;
             cursor: pointer;
             padding: 10px;
             text-align: left;
         }
-        #answers button:hover{
-            background-color: #000;
-            color: white;
+        .btn:hover{
+            cursor: no-drop;
         }
-        #next{
+        #next-container{
             display: flex;
             justify-content: center;
         }
-        #next button{
+        #next {
             height: 40px;
             width: 90px;
-            background-color: #FFCCE1;
+            background-color: #E195AB;
             border: none;
             border-radius: 5px;
             font-size: 17px;
             cursor: pointer;
-            color: #fff;
+            color:#000 ;
             display: none;
         }
         #next button:hover{
             background-color: #E195AB;
         }
-        .correct{
-            background: #88D66C;
+        #answers .correct{
+            background: green;
         }
-        .incorrect{
-            background: #EF5A6F;
+        #answers .incorrect{
+            background: red;
         }
     </style>
 </head>
 <body>
+    <div id="cursor">
+        <div id="inner"></div>
+    </div>
     <div class="app">
         <h1>Sample Quiz</h1>
         <hr>
@@ -87,10 +115,11 @@
                 <button class="btn">Ans4</button>
             </div>
         </div>
-        <div id="next">
-            <button>Next</button>
+        <div id="next-container">
+            <button id="next">Next</button>
         </div>
     </div>
+    <!-- <a href="www.google.com" style="margin-left: 40%;margin-top: 40%;">link CLick meeeeee</a> -->
     <script src="./script.js"></script>
 </body>
 </html>
