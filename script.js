@@ -134,6 +134,7 @@ function showscore(){
     resetstate();
     questionElement.innerText=`Your score is ${score} out of ${questions.length}`;
     nextbtn.style.display="block";
+    nextbtn.innerText="Play Again";
 }
 
 function handlequestion(){
